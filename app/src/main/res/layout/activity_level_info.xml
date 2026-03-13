@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#CCE4C3">
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital Detox Challenge"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Current Level -->
+    <TextView
+        android:id="@+id/tv_current_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재 레벨: Bronze"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_light" />
+
+    <!-- Level Image List -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="2"
+        android:columnCount="3"
+        android:gravity="center">
+
+        <include layout="@layout/level_item" android:id="@+id/item_bronze" />
+        <include layout="@layout/level_item" android:id="@+id/item_silver" />
+        <include layout="@layout/level_item" android:id="@+id/item_gold" />
+        <include layout="@layout/level_item" android:id="@+id/item_platinum" />
+        <include layout="@layout/level_item" android:id="@+id/item_diamond" />
+        <include layout="@layout/level_item" android:id="@+id/item_challenger" />
+
+    </GridLayout>
+
+
+    <!-- 돌아가기 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="돌아가기"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
